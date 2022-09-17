@@ -47,4 +47,4 @@ contract Reentrance {
  ```
 
 ### Install Expert vulnerability Detection System: Oyente: 
-The instuction is aviailable at https://github.com/enzymefinance/oyente.
+The instuction of Oyente is aviailable at https://github.com/enzymefinance/oyente.
