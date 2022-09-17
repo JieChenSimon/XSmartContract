@@ -1,5 +1,9 @@
 # XSmartContract
 <code>
+
+<\code>
+
+ ```python
 pragma solidity ^0.4.15;
 
 contract Reentrance {
@@ -41,9 +45,4 @@ contract Reentrance {
 // INFO:symExec:/home/chen/workspace/codeproject/paperProject/exp_sc/data/data_sample/test.sol:17:14: Warning: Re-Entrancy Vulnerability.
 //         if(!(msg.sender.call.value(userBalance[msg.sender])()
 // INFO:symExec:   ====== Analysis Completed ======
-<\code>
-
- ```python
- #!/usr/bin/env python3
- print("Hello, World!");
  ```
