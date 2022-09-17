@@ -1,5 +1,8 @@
 # XSmartContract
-![Dong Yuanwai's GitHub stats](https://github-readme-stats.vercel.app/api?username=JiechenJohn&show_icons=true)
+<div align="left">
+ ![Dong Yuanwai's GitHub stats](https://github-readme-stats.vercel.app/api?username=JiechenJohn&show_icons=true)
+<\div>
+
 
 <div align="right">
     <img width="40%"  src="readme/img/catcoding.gif" alt="catcoding" />
