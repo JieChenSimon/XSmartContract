@@ -1,6 +1,10 @@
 # XSmartContract
 ![Dong Yuanwai's GitHub stats](https://github-readme-stats.vercel.app/api?username=JiechenJohn&show_icons=true)
 
+<div align="right">
+    <img width="40%"  src="readme/img/catcoding.gif" alt="catcoding" />
+
+</div>
 ### Vulnerability Sample And its Result, Feedback.
  ```python
 pragma solidity ^0.4.15;
@@ -49,7 +53,4 @@ contract Reentrance {
 ### Install Expert vulnerability Detection System: Oyente: 
 The instuction of Oyente is aviailable at https://github.com/enzymefinance/oyente.
 
-<div align="center">
-    <img width="40%"  src="readme/img/catcoding.gif" alt="catcoding" />
 
-</div>
