@@ -50,11 +50,6 @@ contract Reentrance {
 The instuction of Oyente is aviailable at https://github.com/enzymefinance/oyente.
 
 <div align="center">
-    <img  src="./icon/github-contribution-grid-snake.svg" />
-    <br />
-    <img width="40%"  src="./images/catcoding.gif" alt="catcoding" />
-    <img width="40%" src="./images/coding.gif" alt="coding" />
-    <img width="40%" src="./images/techstack.gif" alt="techstack" />
-    <img width="40%" src="./images/giphy.gif" alt="techstack" />
-    <img width="40%" src="./images/giphy2.gif" alt="techstack" />
+    <img width="40%"  src=".readme/image/catcoding.gif" alt="catcoding" />
+
 </div>
