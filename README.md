@@ -1,8 +1,7 @@
 # XSmartContract
-<code>
 
-<\code>
 
+### Vulnerability Sample And its Result, Feedback.
  ```python
 pragma solidity ^0.4.15;
 
