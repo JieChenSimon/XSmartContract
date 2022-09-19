@@ -168,3 +168,50 @@ contract hodlEthereum {
 //         require (block.timestamp > partyTime && hodlers[msg.sender] > 0
 // INFO:symExec:   ====== Analysis Completed ======
  ```
+```python
+pragma solidity ^0.4.16;
+
+contract EthTxOrderDependenceMinimal {
+    address public owner;
+    bool public claimed;
+    uint public reward;
+
+    function EthTxOrderDependenceMinimal() public {
+        owner = msg.sender;
+    }
+
+    function setReward() public payable {
+        require (!claimed);
+
+        require(msg.sender == owner);
+        owner.transfer(reward);
+        reward = msg.value;
+    }
+
+    function claimReward(uint256 submission) {
+        require (!claimed);
+        require(submission < 10);
+
+        msg.sender.transfer(reward);
+        claimed = true;
+    }
+}
+
+// INFO:root:contract /home/chen/workspace/codeproject/paperProject/exp_sc/data/data_sample/test5.sol:EthTxOrderDependenceMinimal:
+// INFO:symExec:   ============ Results ===========
+// INFO:symExec:     EVM Code Coverage:                     98.3%
+// INFO:symExec:     Integer Underflow:                     False
+// INFO:symExec:     Integer Overflow:                      False
+// INFO:symExec:     Parity Multisig Bug 2:                 False
+// INFO:symExec:     Callstack Depth Attack Vulnerability:  False
+// INFO:symExec:     Transaction-Ordering Dependence (TOD): True
+// INFO:symExec:     Timestamp Dependency:                  False
+// INFO:symExec:     Re-Entrancy Vulnerability:             False
+// INFO:symExec:Flow1
+// /home/chen/workspace/codeproject/paperProject/exp_sc/data/data_sample/test5.sol:16:9: Warning: Transaction-Ordering Dependency.
+//         owner.transfer(reward)
+// Flow2
+// /home/chen/workspace/codeproject/paperProject/exp_sc/data/data_sample/test5.sol:24:9: Warning: Transaction-Ordering Dependency.
+//         msg.sender.transfer(reward)
+// INFO:symExec:   ====== Analysis Completed ======
+ ```
