@@ -92,7 +92,7 @@ contract Reentrance {
 //       if(msg.sender.call.value(_amount)()
 // INFO:symExec:   ====== Analysis Completed ======
   ```
-  
+ ### test03：Timestamp 
 ```python
 pragma solidity ^0.4.11;
 contract hodlEthereum {
@@ -130,6 +130,8 @@ contract hodlEthereum {
 //         require (block.timestamp > partyTime && hodlers[msg.sender] > 0
 // INFO:symExec:   ====== Analysis Completed ======
  ```
+ 
+ ### test04: Timestamp
 ```python
 pragma solidity ^0.4.11;
 contract hodlEthereum {
@@ -168,6 +170,8 @@ contract hodlEthereum {
 //         require (block.timestamp > partyTime && hodlers[msg.sender] > 0
 // INFO:symExec:   ====== Analysis Completed ======
  ```
+ 
+ ### test5: TOD
 ```python
 pragma solidity ^0.4.16;
 
