@@ -92,3 +92,41 @@ contract Reentrance {
 //       if(msg.sender.call.value(_amount)()
 // INFO:symExec:   ====== Analysis Completed ======
   ```
+  
+    ```python
+    pragma solidity ^0.4.11;
+contract hodlEthereum {
+    event Hodl(address indexed hodler, uint indexed amount);
+    event Party(address indexed hodler, uint indexed amount);
+    mapping (address => uint) hodlers;
+    uint constant partyTime = 1596067200;  
+    function() payable {
+        hodlers[msg.sender] += msg.value;
+        Hodl(msg.sender, msg.value);
+    }
+    function party() {
+        require (block.timestamp > partyTime && hodlers[msg.sender] > 0);
+        uint value = hodlers[msg.sender];
+        hodlers[msg.sender] = 0;
+        msg.sender.transfer(value);
+        Party(msg.sender, value);
+    }
+}
+// INFO:root:contract /home/chen/workspace/codeproject/paperProject/exp_sc/data/data_sample/test3.sol:hodlEthereum:
+// INFO:symExec:   ============ Results ===========
+// INFO:symExec:     EVM Code Coverage:                     96.5%
+// INFO:symExec:     Integer Underflow:                     False
+// INFO:symExec:     Integer Overflow:                      True
+// INFO:symExec:     Parity Multisig Bug 2:                 False
+// INFO:symExec:     Callstack Depth Attack Vulnerability:  False
+// INFO:symExec:     Transaction-Ordering Dependence (TOD): False
+// INFO:symExec:     Timestamp Dependency:                  True
+// INFO:symExec:     Re-Entrancy Vulnerability:             False
+// INFO:symExec:/home/chen/workspace/codeproject/paperProject/exp_sc/data/data_sample/test3.sol:8:9: Warning: Integer Overflow.
+//         hodlers[msg.sender] += msg.value
+// Integer Overflow occurs if:
+//     hodlers[msg.sender] = 1
+// INFO:symExec:/home/chen/workspace/codeproject/paperProject/exp_sc/data/data_sample/test3.sol:12:18: Warning: Timestamp Dependency.
+//         require (block.timestamp > partyTime && hodlers[msg.sender] > 0
+// INFO:symExec:   ====== Analysis Completed ======
+      ```
