@@ -94,7 +94,7 @@ contract Reentrance {
   ```
   
 ```python
-    pragma solidity ^0.4.11;
+pragma solidity ^0.4.11;
 contract hodlEthereum {
     event Hodl(address indexed hodler, uint indexed amount);
     event Party(address indexed hodler, uint indexed amount);
