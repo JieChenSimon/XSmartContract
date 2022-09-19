@@ -1,4 +1,4 @@
-### test01
+### test01: Integer Overflow and Reentrancy
 ```python
 pragma solidity ^0.4.15;
 
@@ -44,7 +44,7 @@ contract Reentrance {
  ```
  
  
-### test02
+### test02: Callstack
  ```python
  pragma solidity ^0.4.18;
 
