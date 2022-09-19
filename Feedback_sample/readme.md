@@ -93,7 +93,7 @@ contract Reentrance {
 // INFO:symExec:   ====== Analysis Completed ======
   ```
   
-    ```python
+```python
     pragma solidity ^0.4.11;
 contract hodlEthereum {
     event Hodl(address indexed hodler, uint indexed amount);
@@ -129,4 +129,4 @@ contract hodlEthereum {
 // INFO:symExec:/home/chen/workspace/codeproject/paperProject/exp_sc/data/data_sample/test3.sol:12:18: Warning: Timestamp Dependency.
 //         require (block.timestamp > partyTime && hodlers[msg.sender] > 0
 // INFO:symExec:   ====== Analysis Completed ======
-      ```
+ ```
