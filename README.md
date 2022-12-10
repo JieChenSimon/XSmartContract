@@ -1,11 +1,11 @@
 
 
 # XSmartContract
-- 项目
-  - 项目 1
-    - 项目 A
-    - 项目 B
-  - 项目 2
+- Two Expert-based pricinples
+  - Code localization
+    - Line-level Methods
+    - Char-level Methods
+  - Expert-Rules Casting 
 
 <!-- ![XSmartContract's GitHub stats](https://github-readme-stats.vercel.app/api?username=JiechenJohn&show_icons=true) -->
 
